@@ -1,0 +1,18 @@
+# Spring
+spring:
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      username: nacos
+      password: nacos
+      discovery:
+        namespace: 2150be0a-d61f-4a9a-a045-33cc9c17beb3
+        group: DEFAULT_GROUP
+      config:
+        namespace: 2150be0a-d61f-4a9a-a045-33cc9c17beb3
+        group: DEFAULT_GROUP
+        # 配置文件格式
+        file-extension: yml
+        # 共享配置
+        shared-configs:
+          - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
